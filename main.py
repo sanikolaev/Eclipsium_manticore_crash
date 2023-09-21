@@ -11,7 +11,6 @@ from insert_document_schema import InsertDocumentSchema, \
 from post_schema import PostSchema
 from search_schema import RequestSearchSchema
 
-
 BASE_URL = "http://manticore:9308"
 INDEX_STMT = (
     "CREATE TABLE posts_idx ("
@@ -40,7 +39,7 @@ async def insert_to_manticore():
                 source_id=random.randint(1, 5),
                 is_blogger=bool(random.randint(0, 1)),
                 source_type=random.choice(["SMI", "BLOGGER"])
-            ) for _ in range(2000)
+            ) for _ in range(1000)
         ]
         payload = []
 
@@ -134,12 +133,13 @@ async def init_db():
 
 
 async def main():
-    await asyncio.sleep(10) # Ждем запуска мантикоры
+    await asyncio.sleep(10)  # Ждем запуска мантикоры
     await init_db()
 
     async with asyncio.TaskGroup() as tg:
-        tg.create_task(insert_to_manticore())
-        tg.create_task(make_search_request())
+        for _ in range(2):
+            tg.create_task(insert_to_manticore())
+            tg.create_task(make_search_request())
 
 
 if __name__ == "__main__":
