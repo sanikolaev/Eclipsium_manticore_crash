@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "manticore-crash"
+version = "0.1.0"
+description = ""
+authors = ["s.ivanov@resheniy.ru <s.ivanov@resheniy.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "0.25.0"
+pydantic = "<2.0.0"
+lorem-text = "2.1"
+loguru = "0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,33 @@
+version: "3.6"
+services:
+  requests_sender:
+    build:
+      context: .
+      target: production
+    depends_on:
+      - manticore
+
+  manticore:
+    container_name: manticore
+    image: manticoresearch/manticore:6.2.12
+    ports:
+      - 127.0.0.1:9306:9306
+      - 127.0.0.1:9308:9308
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 65535
+        hard: 65535
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - MCL=1
+      - EXTRA=1
+      - QUERY_LOG_TO_STDOUT=true
+    volumes:
+      - ./data:/var/lib/manticore
