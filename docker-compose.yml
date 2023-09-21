@@ -16,6 +16,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: "2"
           memory: 1G
     ulimits:
       nproc: 65535
