@@ -1,0 +1,132 @@
+Manticore 6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)
+Manticore 6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)
+[Wed Sep 20 21:12:20.129 2023] [1] using config file '/etc/manticoresearch/manticore.conf' (9310 chars)...
+[Wed Sep 20 21:12:20.156 2023] [1] starting daemon version '6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)' ...
+starting daemon version '6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)' ...
+[Wed Sep 20 21:12:20.156 2023] [1] listening on all interfaces for mysql, port=9306
+listening on all interfaces for mysql, port=9306
+[Wed Sep 20 21:12:20.156 2023] [1] listening on UNIX socket /var/run/mysqld/mysqld.sock
+listening on UNIX socket /var/run/mysqld/mysqld.sock
+[Wed Sep 20 21:12:20.156 2023] [1] listening on 10.112.130.124:9312 for sphinx and http(s)
+listening on 10.112.130.124:9312 for sphinx and http(s)
+[Wed Sep 20 21:12:20.156 2023] [1] listening on all interfaces for sphinx and http(s), port=9308
+listening on all interfaces for sphinx and http(s), port=9308
+Manticore 6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)
+Copyright (c) 2001-2016, Andrew Aksyonoff
+Copyright (c) 2008-2016, Sphinx Technologies Inc (http://sphinxsearch.com)
+Copyright (c) 2017-2023, Manticore Software LTD (https://manticoresearch.com)
+
+precaching table 'posts_idx'
+[Wed Sep 20 21:12:20.921 2023] [74] WARNING: table 'posts_idx': table 'posts_idx': morphology option changed from config has no effect, ignoring
+WARNING: table 'posts_idx': table 'posts_idx': morphology option changed from config has no effect, ignoring
+[Wed Sep 20 21:12:20.922 2023] [77] binlog: replaying log /var/lib/manticore/binlog/binlog.094
+binlog: replaying log /var/lib/manticore/binlog/binlog.094
+[Wed Sep 20 21:12:23.273 2023] [82] binlog: table posts_idx: recovered from tid 57961614 to tid 57961675
+binlog: table posts_idx: recovered from tid 57961614 to tid 57961675
+[Wed Sep 20 21:12:23.273 2023] [82] binlog: replay stats: 7273 commits; 0 updates, 0 reconfigure; 0 pq-add; 0 pq-delete; 0 pq-add-delete, 1 tables
+binlog: replay stats: 7273 commits; 0 updates, 0 reconfigure; 0 pq-add; 0 pq-delete; 0 pq-add-delete, 1 tables
+[Wed Sep 20 21:12:23.273 2023] [82] binlog: finished replaying /var/lib/manticore/binlog/binlog.094; 190.8 MB in 2.349 sec
+binlog: finished replaying /var/lib/manticore/binlog/binlog.094; 190.8 MB in 2.349 sec
+[Wed Sep 20 21:12:23.273 2023] [82] binlog: finished replaying total 1 in 2.351 sec
+binlog: finished replaying total 1 in 2.351 sec
+[Wed Sep 20 21:12:23.274 2023] [73] prereading 1 tables
+prereading 1 tables
+[Wed Sep 20 21:12:24.121 2023] [1] accepting connections
+accepting connections
+[Wed Sep 20 21:12:24.828 2023] [72] [BUDDY] started v1.0.18 '/usr/share/manticore/modules/manticore-buddy/bin/manticore-buddy --listen=http://10.112.130.124:9312  --threads=16' at http://127.0.0.1:37183
+[BUDDY] started v1.0.18 '/usr/share/manticore/modules/manticore-buddy/bin/manticore-buddy --listen=http://10.112.130.124:9312  --threads=16' at http://127.0.0.1:37183
+[Wed Sep 20 21:12:24.843 2023] [73] preread 1 tables in 1.569 sec
+preread 1 tables in 1.569 sec
+[Wed Sep 20 21:12:24.956 2023] [77] [BUDDY] Loaded plugins:
+[BUDDY] Loaded plugins:
+[Wed Sep 20 21:12:24.956 2023] [77] [BUDDY]   core: empty-string, backup, emulate-elastic, insert, select, show, cli-table, plugin, test, insert-mva
+[BUDDY]   core: empty-string, backup, emulate-elastic, insert, select, show, cli-table, plugin, test, insert-mva
+[Wed Sep 20 21:12:24.956 2023] [77] [BUDDY]   local: 
+[BUDDY]   local: 
+[Wed Sep 20 21:12:24.956 2023] [77] [BUDDY]   extra: 
+[BUDDY]   extra: 
+[Thu Sep 21 04:09:42.589 2023] [84] rt: table posts_idx: diskchunk 11331(33), segments 30  saved in 0.471186 (0.539590) sec, RAM saved/new 44716897/0 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+rt: table posts_idx: diskchunk 11331(33), segments 30  saved in 0.471186 (0.539590) sec, RAM saved/new 44716897/0 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+[Thu Sep 21 04:10:40.983 2023] [87] rt: table posts_idx: optimized progressive chunk(s) 7 ( left 32 ) in 58s 393ms
+rt: table posts_idx: optimized progressive chunk(s) 7 ( left 32 ) in 58s 393ms
+[Thu Sep 21 07:12:20.952 2023] [79] rt: table posts_idx: ramchunk saved ok (mode=periodic, last TID=57984745, current TID=57991151, ram=13.361 Mb, time delta=10958 sec, took=0.031 sec)
+rt: table posts_idx: ramchunk saved ok (mode=periodic, last TID=57984745, current TID=57991151, ram=13.361 Mb, time delta=10958 sec, took=0.031 sec)
+[Thu Sep 21 15:06:34.065 2023] [83] rt: table posts_idx: optimized progressive chunk(s) 6 ( left 32 ) in 45s 746ms
+rt: table posts_idx: optimized progressive chunk(s) 6 ( left 32 ) in 45s 746ms
+[Thu Sep 21 15:07:03.954 2023] [77] rt: table posts_idx: diskchunk 11339(33), segments 30  saved in 1.279197 (1.379430) sec, RAM saved/new 127420200/114590 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+rt: table posts_idx: diskchunk 11339(33), segments 30  saved in 1.279197 (1.379430) sec, RAM saved/new 127420200/114590 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+[Thu Sep 21 15:07:15.517 2023] [76] rt: table posts_idx: optimized progressive chunk(s) 1 ( left 32 ) in 11s 562ms
+rt: table posts_idx: optimized progressive chunk(s) 1 ( left 32 ) in 11s 562ms
+------- FATAL: CRASH DUMP -------
+[Thu Sep 21 15:09:00.198 2023] [    1]
+
+--- crashed HTTP request dump ---
+{"index": "posts_idx", "query": {"bool": {"must": [{"range": {"uploaded_at": {"gte": 1695307439}}}, {"in": {"any(source_type)": ["tg", "rss", "dzen", "vk", "ok"]}}, {"bool": {"should": [{"query_string": "rutube"}, {"query_string": "\u0440\u0443\u0442\u044c\u044e\u0431"}, {"query_string": "\u0440\u0443\u0442\u0443\u0431"}]}}], "must_not": [{"query_string": "https:\\/\\/rutube.ru"}]}}, "limit": 1000, "offset": 0, "sort": ["posted"], "options": {"max_matches": 50000}, "highlight": {"limit": 50000}}
+--- request dump end ---
+--- local index:posts_idx
+Manticore 6.2.0 45680f95d@230804 (columnar 2.2.0 dc33868@230804) (secondary 2.2.0 dc33868@230804)
+Handling signal 11
+Crash!!! Handling signal 11
+-------------- backtrace begins here ---------------
+Program compiled with Clang 15.0.7
+Configured with flags: Configured with these definitions: -DDISTR_BUILD=jammy -DUSE_SYSLOG=1 -DWITH_GALERA=1 -DWITH_RE2=1 -DWITH_RE2_FORCE_STATIC=1 -DWITH_STEMMER=1 -DWITH_STEMMER_FORCE_STATIC=1 -DWITH_NLJSON=1 -DWITH_UNIALGO=1 -DWITH_ICU=1 -DWITH_ICU_FORCE_STATIC=1 -DWITH_SSL=1 -DWITH_ZLIB=1 -DWITH_ZSTD=1 -DDL_ZSTD=1 -DZSTD_LIB=libzstd.so.1 -DWITH_CURL=1 -DDL_CURL=1 -DCURL_LIB=libcurl.so.4 -DWITH_ODBC=1 -DDL_ODBC=1 -DODBC_LIB=libodbc.so.2 -DWITH_EXPAT=1 -DDL_EXPAT=1 -DEXPAT_LIB=libexpat.so.1 -DWITH_ICONV=1 -DWITH_MYSQL=1 -DDL_MYSQL=1 -DMYSQL_LIB=libmysqlclient.so.21 -DWITH_POSTGRESQL=1 -DDL_POSTGRESQL=1 -DPOSTGRESQL_LIB=libpq.so.5 -DLOCALDATADIR=/var/lib/manticore -DFULL_SHARE_DIR=/usr/share/manticore
+Built on Linux x86_64 (jammy) (cross-compiled)
+Stack bottom = 0x7faf5006a980, thread stack size = 0x20000
+Trying manual backtrace:
+Something wrong with thread stack, manual backtrace may be incorrect (fp=0x1)
+Wrong stack limit or frame pointer, manual backtrace failed (fp=0x1, stack=0x7faf50070000, stacksize=0x20000)
+Trying system backtrace:
+begin of system symbols:
+searchd(_Z12sphBacktraceib+0x22a)[0x559455fa456a]
+searchd(_ZN11CrashLogger11HandleCrashEi+0x355)[0x559455e23065]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7faff6876520]
+searchd(_ZNK16Expr_Highlight_c22RearrangeFetchedFieldsERK13DocstoreDoc_t+0x1bc)[0x559456cb097c]
+searchd(_ZNK16Expr_Highlight_c10StringEvalERK9CSphMatchPPKh+0x1b1)[0x559456cb0491]
+searchd(_ZNK8ISphExpr16StringEvalPackedERK9CSphMatch+0x20)[0x559456b41620]
+searchd(+0xeb959c)[0x559455e8259c]
+searchd(+0xeb949c)[0x559455e8249c]
+searchd(_Z18MinimizeAggrResultR12AggrResult_tRK9CSphQuerybRKN3sph9StringSetEP14QueryProfile_cPK18CSphFilterSettingsbb+0x61f4)[0x559455e36314]
+searchd(_ZN15SearchHandler_c9RunSubsetEii+0x1324)[0x559455e3b5a4]
+searchd(_ZN15SearchHandler_c10RunQueriesEv+0xd4)[0x559455e37494]
+searchd(_ZN19HttpSearchHandler_c7ProcessEv+0xaa)[0x559455d65cba]
+searchd(_Z16ProcessHttpQueryR12CharStream_cRSt4pairIPKciER15CSphOrderedHashI10CSphStringS7_15CSphStrHashFuncLi256EERN3sph8Vector_TIhNSB_13DefaultCopy_TIhEENSB_14DefaultRelimitENSB_16DefaultStorage_TIhEEEEb11http_method+0x5fa)[0x559455d5ddba]
+searchd(_Z21ProcessHttpQueryBuddyR12CharStream_cR15CSphOrderedHashI10CSphStringS2_15CSphStrHashFuncLi256EERN3sph8Vector_TIhNS6_13DefaultCopy_TIhEENS6_14DefaultRelimitENS6_16DefaultStorage_TIhEEEEb11http_method+0x45)[0x559455dcc9f5]
+searchd(_ZN19HttpRequestParser_c17ProcessClientHttpER21AsyncNetInputBuffer_cRN3sph8Vector_TIhNS2_13DefaultCopy_TIhEENS2_14DefaultRelimitENS2_16DefaultStorage_TIhEEEE+0x158)[0x559455d5e718]
+searchd(_Z9HttpServeSt10unique_ptrI16AsyncNetBuffer_cSt14default_deleteIS0_EE+0x3c0)[0x559455db1860]
+searchd(_Z10MultiServeSt10unique_ptrI16AsyncNetBuffer_cSt14default_deleteIS0_EESt4pairIitE7Proto_e+0xc7)[0x559455daed47]
+searchd(+0xde68a2)[0x559455daf8a2]
+searchd(_ZZN7Threads11CoRoutine_c13CreateContextESt8functionIFvvEESt4pairIN5boost7context13stack_contextENS_14StackFlavour_EEEENUlNS6_6detail10transfer_tEE_8__invokeESB_+0x1c)[0x5594570f387c]
+searchd(make_fcontext+0x37)[0x559457113b57]
+Trying boost backtrace:
+ 0# sphBacktrace(int, bool) in searchd
+ 1# CrashLogger::HandleCrash(int) in searchd
+ 2# 0x00007FAFF6876520 in /lib/x86_64-linux-gnu/libc.so.6
+ 3# Expr_Highlight_c::RearrangeFetchedFields(DocstoreDoc_t const&) const in searchd
+ 4# Expr_Highlight_c::StringEval(CSphMatch const&, unsigned char const**) const in searchd
+ 5# ISphExpr::StringEvalPacked(CSphMatch const&) const in searchd
+ 6# 0x0000559455E8259C in searchd
+ 7# 0x0000559455E8249C in searchd
+ 8# MinimizeAggrResult(AggrResult_t&, CSphQuery const&, bool, sph::StringSet const&, QueryProfile_c*, CSphFilterSettings const*, bool, bool) in searchd
+ 9# SearchHandler_c::RunSubset(int, int) in searchd
+10# SearchHandler_c::RunQueries() in searchd
+11# HttpSearchHandler_c::Process() in searchd
+12# ProcessHttpQuery(CharStream_c&, std::pair<char const*, int>&, CSphOrderedHash<CSphString, CSphString, CSphStrHashFunc, 256>&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&, bool, http_method) in searchd
+13# ProcessHttpQueryBuddy(CharStream_c&, CSphOrderedHash<CSphString, CSphString, CSphStrHashFunc, 256>&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&, bool, http_method) in searchd
+14# HttpRequestParser_c::ProcessClientHttp(AsyncNetInputBuffer_c&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&) in searchd
+15# HttpServe(std::unique_ptr<AsyncNetBuffer_c, std::default_delete<AsyncNetBuffer_c> >) in searchd
+16# MultiServe(std::unique_ptr<AsyncNetBuffer_c, std::default_delete<AsyncNetBuffer_c> >, std::pair<int, unsigned short>, Proto_e) in searchd
+17# 0x0000559455DAF8A2 in searchd
+18# Threads::CoRoutine_c::CreateContext(std::function<void ()>, std::pair<boost::context::stack_context, Threads::StackFlavour_E>)::{lambda(boost::context::detail::transfer_t)#1}::__invoke(boost::context::detail::transfer_t) in searchd
+19# make_fcontext in searchd
+
+-------------- backtrace ends here ---------------
+Please, create a bug report in our bug tracker (https://github.com/manticoresoftware/manticore/issues)
+and attach there:
+a) searchd log, b) searchd binary, c) searchd symbols.
+Look into the chapter 'Reporting bugs' in the manual
+(https://manual.manticoresearch.com/Reporting_bugs)
+Dump with GDB via watchdog
+--- active threads ---
+thd 0 (work_13), proto http, state net_read, command -
+--- Totally 2 threads, and 1 client-working threads ---
+------- CRASH DUMP END -------
