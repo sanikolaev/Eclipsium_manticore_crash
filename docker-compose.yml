@@ -17,7 +17,7 @@ services:
       resources:
         limits:
           cpus: "2"
-          memory: 4G
+          memory: 1G
     ulimits:
       nproc: 65535
       nofile:

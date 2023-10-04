@@ -2,7 +2,7 @@ from pydantic.main import BaseModel
 
 
 class InsertDocumentSchema(BaseModel):
-    # id: int
+    id: int
     index: str
     doc: dict
 

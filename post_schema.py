@@ -5,6 +5,7 @@ from pydantic.class_validators import validator
 
 
 class PostSchema(BaseModel):
+    id: int
     posted: datetime | float
     uploaded_at: float | None
     title: str | None
