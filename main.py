@@ -14,7 +14,7 @@ from search_schema import RequestSearchSchema
 BASE_URL = "http://manticore:9308"
 INDEX_STMT = (
     "CREATE TABLE posts_idx ("
-    # "id BIGINT, "
+    "id BIGINT, "
     "posted TIMESTAMP, "
     "uploaded_at TIMESTAMP, "
     "title TEXT, "
@@ -31,7 +31,7 @@ async def insert_to_manticore():
     while True:
         posts = [
             PostSchema(
-                # id=random.randint(1, 2 ** 31),
+                id=random.randint(1, 2 ** 31),
                 posted=int(datetime.now(tz=UTC).timestamp()),
                 uploaded_at=int(datetime.now(tz=UTC).timestamp()),
                 title=lorem.sentence(),
@@ -39,7 +39,7 @@ async def insert_to_manticore():
                 source_id=random.randint(1, 5),
                 is_blogger=bool(random.randint(0, 1)),
                 source_type=random.choice(["SMI", "BLOGGER"])
-            ) for _ in range(1000)
+            ) for _ in range(2000)
         ]
         payload = []
 
@@ -47,7 +47,7 @@ async def insert_to_manticore():
             try:
                 insert_stmt = InsertDocumentSchema(
                     index="posts_idx",
-                    # id=post.id,
+                    id=post.id,
                     doc=post.dict(exclude={"id"}),
                 )
             except ValueError as e:
@@ -57,17 +57,20 @@ async def insert_to_manticore():
             payload.append(BulkIReplaceDocumentSchema(replace=insert_stmt))
 
         data_to_post = "\n".join(document.json() for document in payload)
-        async with httpx.AsyncClient(timeout=200) as client:
-            response = await client.post(
-                url=f"{BASE_URL}/bulk",
-                content=data_to_post,
-                headers={"Content-Type": "application/x-ndjson"},
-            )
-            if not response.status_code == 200:
-                logger.error(response.json())
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                response = await client.post(
+                    url=f"{BASE_URL}/bulk",
+                    content=data_to_post,
+                    headers={"Content-Type": "application/x-ndjson"},
+                )
+                if not response.status_code == 200:
+                    logger.error(response.json())
 
-            else:
-                logger.info(response.json())
+                else:
+                    logger.info(response.json())
+        except Exception as e:
+            logger.error(f'Cant insert document by 30 seconds - {e} \n\n')
 
         await asyncio.sleep(0.1)
 
@@ -108,18 +111,20 @@ async def make_search_request():
     body = payload.dict(exclude_none=True)
     body["highlight"] = {"limit": 50_000}
     while True:
-        async with httpx.AsyncClient() as client:
-            response = await client.post(
-                url=f"{BASE_URL}/search",
-                json=body,
-                timeout=200,
-            )
-            if response.status_code != 200:
-                logger.error(response.json())
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.post(
+                    url=f"{BASE_URL}/search",
+                    json=body,
+                    timeout=60,
+                )
+                if response.status_code != 200:
+                    logger.error(response.json())
 
-            else:
-                logger.info(f"Нашли {response.json()['hits']['total']}")
-
+                else:
+                    logger.info(f"Found {response.json()['hits']['total']}\n\n")
+        except Exception as e:
+            logger.error(f'Cant make search request by 30 seconds - {e}')
         await asyncio.sleep(0.1)
 
 
@@ -127,7 +132,7 @@ async def init_db():
     async with httpx.AsyncClient(timeout=30) as client:
         r = await client.get(f'{BASE_URL}/cli?{INDEX_STMT}')
         if r.status_code == 200:
-            logger.info("Инициализировали Индекс")
+            logger.info("index initialized... \n\n")
         else:
             logger.error(r.json())
 

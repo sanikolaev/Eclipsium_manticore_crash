@@ -1,0 +1,182 @@
+[Wed Oct  4 17:10:51.193 2023] [1] starting daemon version '6.2.12 dc5144d35@230822 (columnar 2.2.4 5aec342@230822) (secondary 2.2.4 5aec342@230822)' ...
+[Wed Oct  4 17:10:51.193 2023] [1] listening on all interfaces for mysql, port=9306
+[Wed Oct  4 17:10:51.193 2023] [1] listening on UNIX socket /var/run/mysqld/mysqld.sock
+[Wed Oct  4 17:10:51.193 2023] [1] listening on 192.168.240.2:9312 for sphinx and http(s)
+[Wed Oct  4 17:10:51.194 2023] [1] listening on all interfaces for sphinx and http(s), port=9308
+[Wed Oct  4 17:10:51.212 2023] [114] prereading 0 tables
+[Wed Oct  4 17:10:51.212 2023] [114] preread 0 tables in 0.000 sec
+[Wed Oct  4 17:10:51.216 2023] [1] accepting connections
+[Wed Oct  4 17:10:51.244 2023] [121] [BUDDY] started v1.0.18 '/usr/share/manticore/modules/manticore-buddy/bin/manticore-buddy --listen=http://192.168.240.2:9312  --threads=16' at http://127.0.0.1:44311
+[Wed Oct  4 17:10:51.315 2023] [115] [BUDDY] Loaded plugins:
+[Wed Oct  4 17:10:51.315 2023] [115] [BUDDY]   core: empty-string, backup, emulate-elastic, insert, select, show, cli-table, plugin, test, insert-mva
+[Wed Oct  4 17:10:51.315 2023] [115] [BUDDY]   local: 
+[Wed Oct  4 17:10:51.316 2023] [115] [BUDDY]   extra: 
+[Wed Oct  4 17:11:03.587 2023] [123] rt: table posts_idx: diskchunk 0(1), segments 7  saved in 0.440854 (0.446255) sec, RAM saved/new 48996632/6727986 ratio 0.879264 (soft limit 118012771, conf limit 134217728)
+[Wed Oct  4 17:11:20.575 2023] [114] rt: table posts_idx: diskchunk 1(2), segments 18  saved in 0.908857 (0.914185) sec, RAM saved/new 123580388/6738849 ratio 0.948290 (soft limit 127277286, conf limit 134217728)
+[Wed Oct  4 17:11:51.039 2023] [115] rt: table posts_idx: diskchunk 2(3), segments 19  saved in 5.505866 (5.695699) sec, RAM saved/new 130704214/13938838 ratio 0.903633 (soft limit 121283548, conf limit 134217728)
+[Wed Oct  4 17:11:51.244 2023] [115] rt: table posts_idx: diskchunk 3(4), segments 1  saved in 0.996024 (4.593981) sec, RAM saved/new 7190818/6748020 ratio 0.515884 (soft limit 69240725, conf limit 134217728)
+[Wed Oct  4 17:12:16.153 2023] [113] rt: table posts_idx: diskchunk 4(5), segments 11  saved in 3.112161 (3.117485) sec, RAM saved/new 74569569/7175508 ratio 0.912221 (soft limit 122436218, conf limit 134217728)
+[Wed Oct  4 17:13:01.234 2023] [1] caught SIGTERM, shutting down
+[Wed Oct  4 17:13:02.843 2023] [118] WARNING: conn 192.168.240.3:45152(116), sock=47: failed to receive HTTP request, AsyncNetInputBuffer_c::AppendData: got SIGTERM, return -1
+[Wed Oct  4 17:13:03.348 2023] [115] WARNING: conn 192.168.240.3:45154(117), sock=67: failed to receive HTTP request, AsyncNetInputBuffer_c::AppendData: got SIGTERM, return -1
+[Wed Oct  4 17:13:04.244 2023] [1] WARNING: still 4 alive tasks during shutdown, after 3.004 sec
+[Wed Oct  4 17:13:09.037 2023] [112] Index header format is not json, will try it as binary...
+[Wed Oct  4 17:13:09.040 2023] [112] WARNING: Unable to parse header... Error /var/lib/manticore/posts_idx/posts_idx.5.sph is invalid header file (too old table version?)
+[Wed Oct  4 17:13:09.041 2023] [112] WARNING: rt: table posts_idx failed to load disk chunk after RAM save: disk chunk /var/lib/manticore/posts_idx/posts_idx.5: prealloc failed: /var/lib/manticore/posts_idx/posts_idx.5.sph is invalid header file (too old table version?)
+[Wed Oct  4 17:14:22.780 2023] [1] starting daemon version '6.2.12 dc5144d35@230822 (columnar 2.2.4 5aec342@230822) (secondary 2.2.4 5aec342@230822)' ...
+[Wed Oct  4 17:14:22.781 2023] [1] listening on all interfaces for mysql, port=9306
+[Wed Oct  4 17:14:22.781 2023] [1] listening on UNIX socket /var/run/mysqld/mysqld.sock
+[Wed Oct  4 17:14:22.781 2023] [1] listening on 172.19.0.2:9312 for sphinx and http(s)
+[Wed Oct  4 17:14:22.781 2023] [1] listening on all interfaces for sphinx and http(s), port=9308
+[Wed Oct  4 17:14:22.943 2023] [82] WARNING: table 'posts_idx': table 'posts_idx': morphology option changed from config has no effect, ignoring
+[Wed Oct  4 17:14:22.946 2023] [85] binlog: replaying log /var/lib/manticore/binlog/binlog.002
+[Wed Oct  4 17:14:23.892 2023] [91] table 'posts_idx': ramchunk saved. TID=63
+[Wed Oct  4 17:14:23.893 2023] [91] rt: table posts_idx: diskchunk 5(6), segments 7  saved in 0.332750 (0.339134) sec, RAM saved/new 48512366/76338450 ratio 0.388563 (soft limit 52151998, conf limit 134217728)
+[Wed Oct  4 17:14:24.001 2023] [86] binlog: table posts_idx: recovered from tid 56 to tid 75
+[Wed Oct  4 17:14:24.001 2023] [86] binlog: replay stats: 34 commits; 0 updates, 0 reconfigure; 0 pq-add; 0 pq-delete; 0 pq-add-delete, 1 tables
+[Wed Oct  4 17:14:24.001 2023] [86] binlog: finished replaying /var/lib/manticore/binlog/binlog.002; 217.0 MB in 1.053 sec
+[Wed Oct  4 17:14:24.002 2023] [86] binlog: finished replaying total 1 in 1.055 sec
+[Wed Oct  4 17:14:24.009 2023] [89] prereading 1 tables
+[Wed Oct  4 17:14:24.015 2023] [1] accepting connections
+[Wed Oct  4 17:14:24.030 2023] [89] preread 1 tables in 0.021 sec
+[Wed Oct  4 17:14:24.044 2023] [87] [BUDDY] started v1.0.18 '/usr/share/manticore/modules/manticore-buddy/bin/manticore-buddy --listen=http://172.19.0.2:9312  --threads=16' at http://127.0.0.1:35129
+[Wed Oct  4 17:14:24.081 2023] [90] rt: table posts_idx: diskchunk 6(7), segments 7  saved in 0.330295 (0.340933) sec, RAM saved/new 48965383/34554202 ratio 0.586274 (soft limit 78688399, conf limit 134217728)
+[Wed Oct  4 17:14:24.114 2023] [86] [BUDDY] Loaded plugins:
+[Wed Oct  4 17:14:24.115 2023] [86] [BUDDY]   core: empty-string, backup, emulate-elastic, insert, select, show, cli-table, plugin, test, insert-mva
+[Wed Oct  4 17:14:24.115 2023] [86] [BUDDY]   local: 
+[Wed Oct  4 17:14:24.115 2023] [86] [BUDDY]   extra: 
+[Wed Oct  4 17:14:50.959 2023] [91] rt: table posts_idx: diskchunk 7(8), segments 12  saved in 2.993691 (3.106419) sec, RAM saved/new 83098753/6725709 ratio 0.925124 (soft limit 124168022, conf limit 134217728)
+[Wed Oct  4 17:15:20.758 2023] [80] rt: table posts_idx: diskchunk 8(9), segments 18  saved in 3.908469 (3.914706) sec, RAM saved/new 126704409/13480391 ratio 0.903838 (soft limit 121311140, conf limit 134217728)
+[Wed Oct  4 17:15:21.135 2023] [80] rt: table posts_idx: diskchunk 9(10), segments 2  saved in 0.715940 (0.894505) sec, RAM saved/new 13480391/0 ratio 0.853838 (soft limit 114600253, conf limit 134217728)
+[Wed Oct  4 17:15:56.647 2023] [86] rt: table posts_idx: diskchunk 10(11), segments 17  saved in 5.095678 (5.101916) sec, RAM saved/new 119124185/13927186 ratio 0.895325 (soft limit 120168453, conf limit 134217728)
+[Wed Oct  4 17:16:35.634 2023] [93] rt: table posts_idx: diskchunk 11(12), segments 18  saved in 5.292661 (5.391524) sec, RAM saved/new 124897949/13478938 ratio 0.902593 (soft limit 121143923, conf limit 134217728)
+[Wed Oct  4 17:17:15.639 2023] [86] rt: table posts_idx: diskchunk 12(13), segments 18  saved in 4.594702 (4.689981) sec, RAM saved/new 124513044/7206742 ratio 0.945287 (soft limit 126874316, conf limit 134217728)
+[Wed Oct  4 17:17:55.336 2023] [80] rt: table posts_idx: diskchunk 13(14), segments 19  saved in 4.809171 (4.993980) sec, RAM saved/new 132546392/14377448 ratio 0.902144 (soft limit 121083655, conf limit 134217728)
+[Wed Oct  4 17:17:55.455 2023] [80] rt: table posts_idx: diskchunk 14(15), segments 1  saved in 0.683522 (0.996816) sec, RAM saved/new 7189086/7188362 ratio 0.500025 (soft limit 67112243, conf limit 134217728)
+[Wed Oct  4 17:18:19.337 2023] [80] rt: table posts_idx: diskchunk 15(16), segments 10  saved in 2.901706 (3.090265) sec, RAM saved/new 70047395/6737367 ratio 0.912256 (soft limit 122440989, conf limit 134217728)
+[Wed Oct  4 17:18:59.443 2023] [92] rt: table posts_idx: diskchunk 16(17), segments 18  saved in 5.004810 (5.097098) sec, RAM saved/new 124005709/13904048 ratio 0.899180 (soft limit 120685909, conf limit 134217728)
+[Wed Oct  4 17:19:00.063 2023] [94] rt: table posts_idx: diskchunk 17(18), segments 2  saved in 1.102052 (1.122659) sec, RAM saved/new 13904048/0 ratio 0.849180 (soft limit 113975023, conf limit 134217728)
+[Wed Oct  4 17:19:41.537 2023] [86] rt: table posts_idx: diskchunk 18(19), segments 17  saved in 5.305839 (5.398136) sec, RAM saved/new 119152852/14385517 ratio 0.892274 (soft limit 119759026, conf limit 134217728)
+[Wed Oct  4 17:19:44.074 2023] [1] caught SIGTERM, shutting down
+[Wed Oct  4 17:19:45.245 2023] [89] WARNING: conn 172.19.0.3:40404(185), sock=202: AsyncNetInputBuffer_c::AppendData: got SIGTERM, return -1
+[Wed Oct  4 17:19:45.638 2023] [92] WARNING: conn 172.19.0.3:40398(182), sock=217: failed to receive HTTP request, AsyncNetInputBuffer_c::AppendData: got SIGTERM, return -1
+[Wed Oct  4 17:19:47.156 2023] [1] WARNING: still 4 alive tasks during shutdown, after 3.019 sec
+[Wed Oct  4 17:25:15.831 2023] [1] starting daemon version '6.2.12 dc5144d35@230822 (columnar 2.2.4 5aec342@230822) (secondary 2.2.4 5aec342@230822)' ...
+[Wed Oct  4 17:25:15.831 2023] [1] listening on all interfaces for mysql, port=9306
+[Wed Oct  4 17:25:15.831 2023] [1] listening on UNIX socket /var/run/mysqld/mysqld.sock
+[Wed Oct  4 17:25:15.831 2023] [1] listening on 172.22.0.2:9312 for sphinx and http(s)
+[Wed Oct  4 17:25:15.831 2023] [1] listening on all interfaces for sphinx and http(s), port=9308
+[Wed Oct  4 17:25:16.276 2023] [83] WARNING: table 'posts_idx': table 'posts_idx': morphology option changed from config has no effect, ignoring
+[Wed Oct  4 17:25:16.280 2023] [86] binlog: replaying log /var/lib/manticore/binlog/binlog.001
+[Wed Oct  4 17:25:16.792 2023] [94] binlog: table posts_idx: recovered from tid 222 to tid 226
+[Wed Oct  4 17:25:16.792 2023] [94] binlog: replay stats: 21 commits; 0 updates, 0 reconfigure; 0 pq-add; 0 pq-delete; 0 pq-add-delete, 1 tables
+[Wed Oct  4 17:25:16.792 2023] [94] binlog: finished replaying /var/lib/manticore/binlog/binlog.001; 134.4 MB in 0.511 sec
+[Wed Oct  4 17:25:16.792 2023] [94] binlog: finished replaying total 1 in 0.512 sec
+[Wed Oct  4 17:25:16.799 2023] [83] prereading 1 tables
+[Wed Oct  4 17:25:16.813 2023] [1] accepting connections
+[Wed Oct  4 17:25:16.842 2023] [92] [BUDDY] started v1.0.18 '/usr/share/manticore/modules/manticore-buddy/bin/manticore-buddy --listen=http://172.22.0.2:9312  --threads=16' at http://127.0.0.1:40603
+[Wed Oct  4 17:25:16.912 2023] [85] [BUDDY] Loaded plugins:
+[Wed Oct  4 17:25:16.913 2023] [85] [BUDDY]   core: empty-string, backup, emulate-elastic, insert, select, show, cli-table, plugin, test, insert-mva
+[Wed Oct  4 17:25:16.913 2023] [85] [BUDDY]   local: 
+[Wed Oct  4 17:25:16.913 2023] [85] [BUDDY]   extra: 
+[Wed Oct  4 17:25:17.198 2023] [83] preread 1 tables in 0.399 sec
+[Wed Oct  4 17:25:32.005 2023] [92] rt: table posts_idx: diskchunk 19(20), segments 7  saved in 0.437313 (0.455330) sec, RAM saved/new 49451637/7201773 ratio 0.872880 (soft limit 117155990, conf limit 134217728)
+[Wed Oct  4 17:25:46.565 2023] [81] rt: table posts_idx: diskchunk 20(21), segments 17  saved in 1.444509 (1.466636) sec, RAM saved/new 119095408/6742476 ratio 0.946419 (soft limit 127026254, conf limit 134217728)
+[Wed Oct  4 17:26:03.660 2023] [91] rt: table posts_idx: diskchunk 21(22), segments 19  saved in 2.065299 (2.075280) sec, RAM saved/new 132133987/7186633 ratio 0.948417 (soft limit 127294319, conf limit 134217728)
+[Wed Oct  4 17:26:03.772 2023] [91] rt: table posts_idx: diskchunk 22(23), segments 1  saved in 0.258767 (1.795285) sec, RAM saved/new 7186633/6726166 ratio 0.516548 (soft limit 69329942, conf limit 134217728)
+[Wed Oct  4 17:26:12.169 2023] [93] rt: table posts_idx: diskchunk 23(24), segments 10  saved in 0.663912 (0.699438) sec, RAM saved/new 69638763/7184685 ratio 0.906478 (soft limit 121665413, conf limit 134217728)
+[Wed Oct  4 17:26:28.460 2023] [88] rt: table posts_idx: diskchunk 24(25), segments 18  saved in 1.451463 (1.474546) sec, RAM saved/new 126245099/0 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+[Wed Oct  4 17:26:47.978 2023] [88] rt: table posts_idx: diskchunk 25(26), segments 19  saved in 2.309696 (2.315526) sec, RAM saved/new 132501138/13933653 ratio 0.904847 (soft limit 121446560, conf limit 134217728)
+[Wed Oct  4 17:26:48.065 2023] [88] rt: table posts_idx: diskchunk 26(27), segments 1  saved in 0.208408 (1.797461) sec, RAM saved/new 6750314/7183339 ratio 0.484461 (soft limit 65023279, conf limit 134217728)
+[Wed Oct  4 17:26:56.773 2023] [83] rt: table posts_idx: diskchunk 27(28), segments 10  saved in 0.889134 (0.894357) sec, RAM saved/new 70531174/6734359 ratio 0.912841 (soft limit 122519492, conf limit 134217728)
+[Wed Oct  4 17:27:17.925 2023] [82] rt: table posts_idx: diskchunk 28(29), segments 19  saved in 2.758511 (2.782468) sec, RAM saved/new 128918742/21109962 ratio 0.859294 (soft limit 115332467, conf limit 134217728)
+[Wed Oct  4 17:27:18.146 2023] [82] rt: table posts_idx: diskchunk 29(30), segments 1  saved in 0.142646 (2.654264) sec, RAM saved/new 7190219/13919743 ratio 0.340608 (soft limit 45715613, conf limit 134217728)
+[Wed Oct  4 17:27:24.256 2023] [95] rt: table posts_idx: diskchunk 30(31), segments 7  saved in 0.655996 (0.672599) sec, RAM saved/new 48971860/0 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+[Wed Oct  4 17:27:44.672 2023] [91] rt: table posts_idx: diskchunk 31(32), segments 19  saved in 2.261065 (2.269689) sec, RAM saved/new 133411101/6721760 ratio 0.950000 (soft limit 127506841, conf limit 134217728)
+[Wed Oct  4 17:27:44.867 2023] [94] rt: table posts_idx: diskchunk 32(33), segments 1  saved in 0.286963 (0.304619) sec, RAM saved/new 6721760/0 ratio 0.900000 (soft limit 120795955, conf limit 134217728)
+------- FATAL: CRASH DUMP -------
+[Wed Oct  4 17:27:47.756 2023] [    1]
+
+--- crashed HTTP request dump ---
+{"index": "posts_idx", "query": {"bool": {"must": [{"range": {"uploaded_at": {"gte": 1696353928}}}, {"equals": {"is_blogger": 1}}, {"in": {"any(source_id)": [0, 1, 2, 3, 4]}}, {"bool": {"should": [{"query_string": "\"facilis\""}, {"query_string": "\"esse\""}, {"query_string": "\"corrupti\""}, {"query_string": "\"iusto\""}, {"query_string": "\"ex\""}, {"query_string": "\"reiciendis\""}, {"query_string": "\"consequatur\""}, {"query_string": "\"accusantium\""}, {"query_string": "\"reprehenderit\""}, {"query_string": "\"minima\""}]}}], "must_not": [{"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}, {"query_string": "\"some_exclude_words\""}]}}, "limit": 10000, "offset": 0, "sort": ["posted"], "options": {"max_matches": 50000}, "highlight": {"limit": 50000}}
+--- request dump end ---
+--- local index:posts_idx
+Manticore 6.2.12 dc5144d35@230822 (columnar 2.2.4 5aec342@230822) (secondary 2.2.4 5aec342@230822)
+Handling signal 11
+-------------- backtrace begins here ---------------
+Program compiled with Clang 15.0.7
+Configured with flags: Configured with these definitions: -DDISTR_BUILD=jammy -DUSE_SYSLOG=1 -DWITH_GALERA=1 -DWITH_RE2=1 -DWITH_RE2_FORCE_STATIC=1 -DWITH_STEMMER=1 -DWITH_STEMMER_FORCE_STATIC=1 -DWITH_NLJSON=1 -DWITH_UNIALGO=1 -DWITH_ICU=1 -DWITH_ICU_FORCE_STATIC=1 -DWITH_SSL=1 -DWITH_ZLIB=1 -DWITH_ZSTD=1 -DDL_ZSTD=1 -DZSTD_LIB=libzstd.so.1 -DWITH_CURL=1 -DDL_CURL=1 -DCURL_LIB=libcurl.so.4 -DWITH_ODBC=1 -DDL_ODBC=1 -DODBC_LIB=libodbc.so.2 -DWITH_EXPAT=1 -DDL_EXPAT=1 -DEXPAT_LIB=libexpat.so.1 -DWITH_ICONV=1 -DWITH_MYSQL=1 -DDL_MYSQL=1 -DMYSQL_LIB=libmysqlclient.so.21 -DWITH_POSTGRESQL=1 -DDL_POSTGRESQL=1 -DPOSTGRESQL_LIB=libpq.so.5 -DLOCALDATADIR=/var/lib/manticore -DFULL_SHARE_DIR=/usr/share/manticore
+Built on Linux x86_64 (jammy) (cross-compiled)
+Stack bottom = 0x7f15540a3f90, thread stack size = 0x20000
+Trying manual backtrace:
+Something wrong with thread stack, manual backtrace may be incorrect (fp=0x1)
+Wrong stack limit or frame pointer, manual backtrace failed (fp=0x1, stack=0x7f15540a0000, stacksize=0x20000)
+Trying system backtrace:
+begin of system symbols:
+searchd(_Z12sphBacktraceib+0x22a)[0x5585069e69fa]
+searchd(_ZN11CrashLogger11HandleCrashEi+0x355)[0x5585068652b5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7f15a10a8520]
+searchd(_ZNK16Expr_Highlight_c22RearrangeFetchedFieldsERK13DocstoreDoc_t+0x1bc)[0x5585076f2dcc]
+searchd(_ZNK16Expr_Highlight_c10StringEvalERK9CSphMatchPPKh+0x1b1)[0x5585076f28e1]
+searchd(_ZNK8ISphExpr16StringEvalPackedERK9CSphMatch+0x20)[0x558507583ab0]
+searchd(+0xeb994c)[0x5585068c494c]
+searchd(+0xeb984c)[0x5585068c484c]
+searchd(_Z18MinimizeAggrResultR12AggrResult_tRK9CSphQuerybRKN3sph9StringSetEP14QueryProfile_cPK18CSphFilterSettingsbb+0x61f4)[0x558506878564]
+searchd(_ZN15SearchHandler_c9RunSubsetEii+0x1324)[0x55850687d7f4]
+searchd(_ZN15SearchHandler_c10RunQueriesEv+0xd4)[0x5585068796e4]
+searchd(_ZN19HttpSearchHandler_c7ProcessEv+0xaa)[0x5585067a7eda]
+searchd(_Z16ProcessHttpQueryR12CharStream_cRSt4pairIPKciER15CSphOrderedHashI10CSphStringS7_15CSphStrHashFuncLi256EERN3sph8Vector_TIhNSB_13DefaultCopy_TIhEENSB_14DefaultRelimitENSB_16DefaultStorage_TIhEEEEb11http_method+0x5fa)[0x55850679ffda]
+searchd(_Z21ProcessHttpQueryBuddyR12CharStream_cR15CSphOrderedHashI10CSphStringS2_15CSphStrHashFuncLi256EERN3sph8Vector_TIhNS6_13DefaultCopy_TIhEENS6_14DefaultRelimitENS6_16DefaultStorage_TIhEEEEb11http_method+0x45)[0x55850680ec45]
+searchd(_ZN19HttpRequestParser_c17ProcessClientHttpER21AsyncNetInputBuffer_cRN3sph8Vector_TIhNS2_13DefaultCopy_TIhEENS2_14DefaultRelimitENS2_16DefaultStorage_TIhEEEE+0x158)[0x5585067a0938]
+searchd(_Z9HttpServeSt10unique_ptrI16AsyncNetBuffer_cSt14default_deleteIS0_EE+0x3c0)[0x5585067f3ab0]
+searchd(_Z10MultiServeSt10unique_ptrI16AsyncNetBuffer_cSt14default_deleteIS0_EESt4pairIitE7Proto_e+0xc7)[0x5585067f0f97]
+searchd(+0xde6af2)[0x5585067f1af2]
+searchd(_ZZN7Threads11CoRoutine_c13CreateContextESt8functionIFvvEESt4pairIN5boost7context13stack_contextENS_14StackFlavour_EEEENUlNS6_6detail10transfer_tEE_8__invokeESB_+0x1c)[0x558507b35dac]
+searchd(make_fcontext+0x37)[0x558507b56167]
+Trying boost backtrace:
+ 0# sphBacktrace(int, bool) in searchd
+ 1# CrashLogger::HandleCrash(int) in searchd
+ 2# 0x00007F15A10A8520 in /lib/x86_64-linux-gnu/libc.so.6
+ 3# Expr_Highlight_c::RearrangeFetchedFields(DocstoreDoc_t const&) const in searchd
+ 4# Expr_Highlight_c::StringEval(CSphMatch const&, unsigned char const**) const in searchd
+ 5# ISphExpr::StringEvalPacked(CSphMatch const&) const in searchd
+ 6# 0x00005585068C494C in searchd
+ 7# 0x00005585068C484C in searchd
+ 8# MinimizeAggrResult(AggrResult_t&, CSphQuery const&, bool, sph::StringSet const&, QueryProfile_c*, CSphFilterSettings const*, bool, bool) in searchd
+ 9# SearchHandler_c::RunSubset(int, int) in searchd
+10# SearchHandler_c::RunQueries() in searchd
+11# HttpSearchHandler_c::Process() in searchd
+12# ProcessHttpQuery(CharStream_c&, std::pair<char const*, int>&, CSphOrderedHash<CSphString, CSphString, CSphStrHashFunc, 256>&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&, bool, http_method) in searchd
+13# ProcessHttpQueryBuddy(CharStream_c&, CSphOrderedHash<CSphString, CSphString, CSphStrHashFunc, 256>&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&, bool, http_method) in searchd
+14# HttpRequestParser_c::ProcessClientHttp(AsyncNetInputBuffer_c&, sph::Vector_T<unsigned char, sph::DefaultCopy_T<unsigned char>, sph::DefaultRelimit, sph::DefaultStorage_T<unsigned char> >&) in searchd
+15# HttpServe(std::unique_ptr<AsyncNetBuffer_c, std::default_delete<AsyncNetBuffer_c> >) in searchd
+16# MultiServe(std::unique_ptr<AsyncNetBuffer_c, std::default_delete<AsyncNetBuffer_c> >, std::pair<int, unsigned short>, Proto_e) in searchd
+17# 0x00005585067F1AF2 in searchd
+18# Threads::CoRoutine_c::CreateContext(std::function<void ()>, std::pair<boost::context::stack_context, Threads::StackFlavour_E>)::{lambda(boost::context::detail::transfer_t)#1}::__invoke(boost::context::detail::transfer_t) in searchd
+19# make_fcontext in searchd
+
+-------------- backtrace ends here ---------------
+Please, create a bug report in our bug tracker (https://github.com/manticoresoftware/manticore/issues)
+and attach there:
+a) searchd log, b) searchd binary, c) searchd symbols.
+Look into the chapter 'Reporting bugs' in the manual
+(https://manual.manticoresearch.com/Reporting_bugs)
+Dump with GDB via watchdog
+--- active threads ---
+thd 0 (work_0), proto http, state net_read, command -
+thd 1 (work_1), proto http, state net_read, command -
+thd 2 (work_2), proto http, state net_read, command -
+thd 3 (work_4), proto http, state net_read, command -
+thd 4 (work_5), proto http, state net_read, command -
+thd 5 (work_6), proto http, state net_read, command -
+thd 6 (work_7), proto http, state net_read, command -
+thd 7 (work_8), proto http, state net_read, command -
+thd 8 (work_9), proto http, state net_read, command -
+thd 9 (work_10), proto http, state net_read, command -
+thd 10 (work_11), proto http, state net_read, command -
+thd 11 (work_12), proto http, state net_read, command -
+thd 12 (work_13), proto http, state net_read, command -
+thd 13 (work_14), proto http, state net_read, command -
+thd 14 (work_15), proto http, state net_read, command -
+--- Totally 17 threads, and 15 client-working threads ---
+------- CRASH DUMP END -------
