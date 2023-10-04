@@ -32,4 +32,5 @@ services:
       - QUERY_LOG_TO_STDOUT=true
     volumes:
       - ./data:/var/lib/manticore
+      - ./logs:/var/log/manticore
     command: ["searchd", "--nodetach", "--coredump"]
