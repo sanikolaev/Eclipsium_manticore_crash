@@ -14,7 +14,7 @@ from search_schema import RequestSearchSchema
 BASE_URL = "http://manticore:9308"
 INDEX_STMT = (
     "CREATE TABLE posts_idx ("
-    "id BIGINT, "
+    # "id BIGINT, "
     "posted TIMESTAMP, "
     "uploaded_at TIMESTAMP, "
     "title TEXT, "
@@ -31,7 +31,7 @@ async def insert_to_manticore():
     while True:
         posts = [
             PostSchema(
-                id=random.randint(1, 2 ** 31),
+                # id=random.randint(1, 2 ** 31),
                 posted=int(datetime.now(tz=UTC).timestamp()),
                 uploaded_at=int(datetime.now(tz=UTC).timestamp()),
                 title=lorem.sentence(),
@@ -47,7 +47,7 @@ async def insert_to_manticore():
             try:
                 insert_stmt = InsertDocumentSchema(
                     index="posts_idx",
-                    id=post.id,
+                    # id=post.id,
                     doc=post.dict(exclude={"id"}),
                 )
             except ValueError as e:
@@ -57,7 +57,7 @@ async def insert_to_manticore():
             payload.append(BulkIReplaceDocumentSchema(replace=insert_stmt))
 
         data_to_post = "\n".join(document.json() for document in payload)
-        async with httpx.AsyncClient(timeout=30) as client:
+        async with httpx.AsyncClient(timeout=200) as client:
             response = await client.post(
                 url=f"{BASE_URL}/bulk",
                 content=data_to_post,
@@ -112,7 +112,7 @@ async def make_search_request():
             response = await client.post(
                 url=f"{BASE_URL}/search",
                 json=body,
-                timeout=60,
+                timeout=200,
             )
             if response.status_code != 200:
                 logger.error(response.json())
