@@ -9,10 +9,10 @@ services:
 
   manticore:
     container_name: manticore
-    image: manticoresearch/manticore:6.0.4
+    image: manticoresearch/manticore:dev-6.2.13-f94555a
     ports:
-      - 127.0.0.1:9306:9306
-      - 127.0.0.1:9308:9308
+      - 127.0.0.1:49306:9306
+      - 127.0.0.1:49308:9308
     deploy:
       resources:
         limits:
